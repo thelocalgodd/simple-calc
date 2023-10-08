@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simple Calculator made with html, css, js">
+    <link rel="stylesheet" href="/styles/light-mode.css" id="theme">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="/assets/Please (1).png" type="image/x-icon">
+    <title>Calc</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="container">
+            <div id="header">
+                <h2 id="header-text">Calculator | TLG</h2>
+                <div id="row-0">
+                    <a href="https://github.com/thelocalgodd/">
+                        <img src="assets/GitHubDark.svg" alt="github" id="github-icon">
+                    </a>
+                    <button onclick="changeTheme()" id="theme-button">
+                        <img src="/assets/MoonIcon.svg" alt="sun" id="theme-icon">
+                    </button>
+                </div>
+            </div>
+            <div id="row-1">
+                <input type="text" name="display" placeholder="result" id="result" readonly />
+                <input type="button" value="C" onclick="results.value=''" id="clear-button">
+            </div>
+            <div id="row-2">
+                <input type="button" value="1" onclick="display(1)"/>
+                <input type="button" value="2" onclick="display(2)"/>
+                <input type="button" value="3" onclick="display(3)"/>
+                <input type="button" value="+" onclick="display('+')"/>
+            </div>
+            <div id="row-3">
+                <input type="button" value="4" onclick="display(4)"/>
+                <input type="button" value="5" onclick="display(5)"/>
+                <input type="button" value="6" onclick="display(6)"/>
+                <input type="button" value="-" onclick="display('-')"/>
+            </div>
+            <div id="row-4">
+                <input type="button" value="7" onclick="display(7)"/>
+                <input type="button" value="8" onclick="display(8)"/>
+                <input type="button" value="9" onclick="display(9)"/>
+                <input type="button" value="x" onclick="display('*')"/>
+            </div>
+            <div id="row-5">
+                <input type="button" value="/" onclick="display('/')"/>
+                <input type="button" value="0" onclick="display(0)"/>
+                <input type="button" value="." onclick="display('.')"/>
+                <input type="button" value="=" onclick="calculate(results.value)"/>
+            </div>
+        </div>
+    </div>
+    <script src="/scripts/script.js"></script>
+</body>
+</html>
